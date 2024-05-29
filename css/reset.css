@@ -1,0 +1,14 @@
+body{
+    box-sizing: border-box;
+    font-family: "M PLUS Rounded 1c", Arial, sans-serif;
+}
+
+body, h1, h2, h3, figure, input, p{
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border:none;
+    font-family: inherit;
+}

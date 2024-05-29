@@ -1,0 +1,22 @@
+.container-paragraph{
+    display: flex;
+    align-items: flex-start; 
+}
+
+.left-text {
+    color: var(--fifth-color);
+    writing-mode: vertical-rl;
+    font-weight: 900;
+    font-size: 3em;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; 
+}
+.right-text { 
+    color: var(--first-color);
+    font-weight: 900;
+    font-size: 10em;
+    display: flex;
+    align-items: flex-start;
+}
+

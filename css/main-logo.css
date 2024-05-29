@@ -1,0 +1,6 @@
+@import "colors.css";
+
+.main-logo {
+    color: var(--fifth-color);
+    font-weight: 900;
+}
