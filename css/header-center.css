@@ -1,7 +1,0 @@
-.header-center {
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
