@@ -1,0 +1,17 @@
+.wrapper-titles {
+    width: 100%;
+    text-align:center;
+    padding-top: 100px;
+}
+
+.main-title{ 
+    color: var(--fourth-color);
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.second-title {
+    color: var(--fourth-color);
+    font-weight: 400;
+    font-size: 1em;
+}
