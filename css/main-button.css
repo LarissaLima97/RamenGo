@@ -1,0 +1,35 @@
+.main-button { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--second-color);
+    color: var(--first-color);
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.button-text {
+    margin-right: 10px;
+    letter-spacing: 1.78px;
+}
+
+.button-arrow {
+    color: var(--fifth-color);
+    font-size: 1.5em;
+    font-weight: 100; 
+    transform: scaleX(1.2); /
+}
+
+.main-button:disabled {
+    background-color: #C5C5C5;
+    color: var(--first-color);
+    cursor: not-allowed; 
+}
+
+.main-button:disabled .button-arrow  {
+    color: var(--first-color);
+}
