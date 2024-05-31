@@ -8,7 +8,6 @@
     height: 280px;
     background-color: var(--first-color);
     box-shadow: 0 4px 12px #E0DBBF99;
-    margin-left: 150px;
     padding: 20px;
     cursor: pointer;
 }
@@ -25,6 +24,7 @@
     font-size: 0.8em;
     color: var(--fourth-color);
     margin-top: 10px;
+    text-align: center;
 }
 
 .card-price { 
