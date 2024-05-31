@@ -53,20 +53,20 @@
             </div>
             <form>
                 <div role="radiogroup" class="wrapper-cards">
-                    <div role="radio" class="main-card">
-                        <img src="./assets/images/inactive_salt.png" alt="Saleiro azul com tampa vermelha">
+                    <div role="radio" class="main-card" id="salt-option" value="salt" onclick="selectCardBroth('#salt-option', './assets/images/active_salt.png')">
+                        <img src="./assets/images/inactive_salt.png">
                         <p class="card-title">Salt</p>
                         <p class="card-text">Simple like the seawater, nothing more </p>
                         <p class="card-price">US$10</p>
                     </div>
-                    <div role="radio" class="main-card">
-                        <img src="./assets/images/inactive_shoyu.png" alt="Saleiro azul com tampa vermelha">
+                    <div role="radio" class="main-card" id="shoyu-option" value="shoyu" onclick="selectCardBroth('#shoyu-option', './assets/images/active_shoyu.png')">
+                        <img src="./assets/images/inactive_shoyu.png">
                         <p class="card-title">Shoyu</p>
                         <p class="card-text">The good old and traditional soy sauce </p>
                         <p class="card-price">US$10</p>
                     </div>
-                    <div role="radio" class="main-card">
-                        <img src="./assets/images/inactive_miso.png" alt="Saleiro azul com tampa vermelha">
+                    <div role="radio" class="main-card" id="miso-option" onclick="selectCardBroth('#miso-option', './assets/images/active_miso.png')">
+                        <img src="./assets/images/inactive_miso.png">
                         <p class="card-title">Miso</p>
                         <p class="card-text">Paste made of fermented soybeans</p>
                         <p class="card-price">US$12</p>
@@ -82,30 +82,31 @@
             </div>
             <form>
                 <div role="radiogroup" class="wrapper-cards">
-                    <div role="radio" class="main-card">
-                        <img src="./assets/images/inactive_pork.png" alt="Saleiro azul com tampa vermelha">
+                    <div role="radio" class="main-card" id="pork-option" onclick="selectCardMeat('#pork-option', './assets/images/active_pork.png')">
+                        <img src="./assets/images/inactive_pork.png">
                         <p class="card-title">Chasu</p>
                         <p class="card-text">A sliced flavourful pork meat with a selection of season vegetables.</p>
                         <p class="card-price">US$10</p>
                     </div>
-                    <div role="radio" class="main-card">
-                        <img src="./assets/images/inactive_yasai.png" alt="Saleiro azul com tampa vermelha">
+                    <div role="radio" class="main-card" id="yasai-option" onclick="selectCardMeat('#yasai-option', './assets/images/active_yasai.png')">
+                        <img src="./assets/images/inactive_yasai.png">
                         <p class="card-title">Yasai Vegetarian</p>
                         <p class="card-text">A delicious vegetarian lamen with a selection of season vegetables. </p>
                         <p class="card-price">US$10</p>
                     </div>
-                    <div role="radio" class="main-card">
-                        <img src="./assets/images/inactive_chicken.png" alt="Saleiro azul com tampa vermelha">
+                    <div role="radio" class="main-card" id="chicken-option" onclick="selectCardMeat('#chicken-option', './assets/images/active_chicken.png')">
+                        <img src="./assets/images/inactive_chicken.png">
                         <p class="card-title">Karaague</p>
                         <p class="card-text">Three units of fried chicken, moyashi, ajitama egg and other vegetables.</p>
                         <p class="card-price">US$12</p>
                     </div>
                 </div>
+                <button class="main-button button-center" disabled>
+                    <span class="button-text">PLACE MY ORDER</span>
+                    <span class="button-arrow" aria-hidden="true">→</span>
+                </button>
             </form>
-            <button class="main-button button-center" disabled>
-                <span class="button-text">PLACE MY ORDER</span>
-                <span class="button-arrow" aria-hidden="true">→</span>
-            </button>
         </section>
+        <script src="./js/selectCard.js"></script>
     </body>
 </html>
