@@ -7,7 +7,6 @@
     font-weight: 800;
     padding: 10px;
     border-radius: 50px;
-    width: 100%;
     font-size: 0.8em;
     cursor: pointer;
 }
@@ -32,4 +31,8 @@
 
 .main-button:disabled .button-arrow  {
     color: var(--first-color);
+}
+
+.button-center {
+    margin: 50px auto;
 }
