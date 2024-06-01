@@ -18,3 +18,10 @@
       margin-right: auto;
     }
 }
+
+.main-logo.sucess {
+  position: absolute;
+  color: var(--third-color);
+  font-weight: 900;
+  padding: 20px;
+}
