@@ -1,0 +1,52 @@
+.sucess-section {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background-image: url("../assets/images/pattern-azul.png");
+}
+
+.right {
+    right: 0;
+    background-image: var(--first-color);
+}
+
+.wrapper-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-first {
+    font-weight: 900;
+    font-size: 1.25em;
+    color: var(--sixth-color);
+    margin-top: 20px;
+}
+
+.text-second {
+    font-weight: 900;
+    font-size: 2em;
+    color: var(--fifth-color);
+}
+
+.text-third {
+    font-weight: 900;
+    font-size: 2em;
+    color: var(--third-color);
+}
+
+.text-fourth {
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--fourth-color);
+}
