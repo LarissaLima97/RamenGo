@@ -1,7 +1,5 @@
 let broth = "";
 let meat = "";
-let img_success = ""
-let text_success = ""
 
 function selectCard(id, imgSrc) {
     const selectedCard = document.querySelector(id);
@@ -22,22 +20,22 @@ function selectCard(id, imgSrc) {
 }
 
 function resetCard (id, imgSrc) {
-    const saltCard = document.querySelector(id);
+    const card = document.querySelector(id);
 
-    saltCard.style.backgroundColor = "#FAFAED";
+    card.style.backgroundColor = "#FAFAED";
 
 
-    const image = saltCard.querySelector("img");
+    const image = card.querySelector("img");
     image.src = imgSrc;
 
 
-    const cardTitle = saltCard.querySelector(".card-title");
+    const cardTitle = card.querySelector(".card-title");
     cardTitle.style.color = "#1820EF";
 
-    const cardText = saltCard.querySelector(".card-text");
+    const cardText = card.querySelector(".card-text");
     cardText.style.color = "#000000";
 
-    const cardPrice = saltCard.querySelector(".card-price");
+    const cardPrice = card.querySelector(".card-price");
     cardPrice.style.color = "#FF4E42";
 
 }
@@ -83,11 +81,7 @@ const submitButton = async() => {
     const meatId = document.querySelector(meat).getAttribute("data-value");
 
     const response = await postOrder(brothId,meatId);
-    console.log(response)
-    img_success = response["image"]
-    text_success = response["description"]
-    console.log(text_success)
-    
+ 
     const params = new URLSearchParams({
         description: response.description,
         image: response.image
@@ -95,10 +89,13 @@ const submitButton = async() => {
 
     window.location.href = 'success.html?' + params.toString();
 }
+
 function populateSucess() {
     const urlParams = new URLSearchParams(window.location.search);
+
     const description = urlParams.get('description');
     const imageSrc = urlParams.get('image');
+
     const image = document.querySelector("#image-success");
     const text = document.querySelector("#text-success");
     
@@ -116,6 +113,54 @@ function goOrder() {
     return window.location.href = "#broth-section"
 }
 
+const populateBroth = async() => {
+    const brothList = await getBroths(); 
 
+    for (let i = 0; i < brothList.length; i++) {
+        if (brothList[i].name === "Salt") {
+            populateCard(brothList[i], "salt");
+        } 
+        else if (brothList[i].name === "Shoyu"){
+            console.log("shoyu", brothList[i])
+            populateCard(brothList[i], "shoyu");
+        }
+        else {
+            populateCard(brothList[i], "miso");
+        }
+        
+    }
+}
 
+const populateMeat = async() => {
+    const meatList = await getProteins(); 
 
+    for (let i = 0; i < meatList.length; i++) {
+        if (meatList[i].name === "Chasu") {
+            populateCard(meatList[i], "chasu");
+        } 
+        else if (meatList[i].name === "Yasai Vegetarian"){
+            console.log("shoyu", meatList[i])
+            populateCard(meatList[i], "yasai");
+        }
+        else {
+            populateCard(meatList[i], "karaague");
+        }
+        
+    }
+}
+
+function populateCard(payload,id) {
+    console.log(payload)
+    const title = document.querySelector(`#${id}-title`);
+    const description = document.querySelector(`#${id}-desc`);
+    const price = document.querySelector(`#${id}-price`);
+    const image = document.querySelector(`#${id}-image`);
+
+    title.textContent = payload.name;
+    description.textContent = payload.description;
+    price.textContent = `US$${payload.price}`;
+    image.src = payload.imageInactive;
+}
+
+document.addEventListener('DOMContentLoaded', populateBroth);
+document.addEventListener('DOMContentLoaded', populateMeat);
