@@ -121,7 +121,6 @@ const populateBroth = async() => {
             populateCard(brothList[i], "salt");
         } 
         else if (brothList[i].name === "Shoyu"){
-            console.log("shoyu", brothList[i])
             populateCard(brothList[i], "shoyu");
         }
         else {
@@ -139,7 +138,6 @@ const populateMeat = async() => {
             populateCard(meatList[i], "chasu");
         } 
         else if (meatList[i].name === "Yasai Vegetarian"){
-            console.log("shoyu", meatList[i])
             populateCard(meatList[i], "yasai");
         }
         else {
@@ -150,7 +148,6 @@ const populateMeat = async() => {
 }
 
 function populateCard(payload,id) {
-    console.log(payload)
     const title = document.querySelector(`#${id}-title`);
     const description = document.querySelector(`#${id}-desc`);
     const price = document.querySelector(`#${id}-price`);
