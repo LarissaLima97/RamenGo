@@ -1,5 +1,7 @@
 let broth = "";
 let meat = "";
+let img_success = ""
+let text_success = ""
 
 function selectCard(id, imgSrc) {
     const selectedCard = document.querySelector(id);
@@ -67,9 +69,8 @@ function clearCardsMeat () {
 }
 
 function handleButton () {
-    const brothValue = document.querySelector(broth).getAttribute("data-value");
-    const meatValue = document.querySelector(meat).getAttribute("data-value");
-    if(brothValue !== "" && meatValue !== "") {
+  
+    if(broth !== "" && meat !== "") {
         document.querySelector("#place-order-button").disabled = false;
     }
     else {
@@ -77,7 +78,43 @@ function handleButton () {
     }
 }
 
+const submitButton = async() => {
+    const brothId = document.querySelector(broth).getAttribute("data-value");
+    const meatId = document.querySelector(meat).getAttribute("data-value");
 
+    const response = await postOrder(brothId,meatId);
+    console.log(response)
+    img_success = response["image"]
+    text_success = response["description"]
+    console.log(text_success)
+    
+    const params = new URLSearchParams({
+        description: response.description,
+        image: response.image
+    });
+
+    window.location.href = 'success.html?' + params.toString();
+}
+function populateSucess() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const description = urlParams.get('description');
+    const imageSrc = urlParams.get('image');
+    const image = document.querySelector("#image-success");
+    const text = document.querySelector("#text-success");
+    
+    text.textContent = description;
+    image.src = imageSrc;
+}
+
+document.addEventListener('DOMContentLoaded', populateSucess);
+
+function goHome() {
+    return window.location.href = "index.html"
+}
+
+function goOrder() {
+    return window.location.href = "#broth-section"
+}
 
 
 

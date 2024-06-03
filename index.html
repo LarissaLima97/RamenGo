@@ -37,7 +37,7 @@
                         <p class="right-text">GO!</p>
                         <div class="additional-text">
                             <p>Enjoy a good ramen in the comfort of your house. Create your own ramen and choose your favorite flavour combination!</p>
-                            <button class="main-button">
+                            <button class="main-button" onclick="goOrder()">
                                 <span class="button-text">ORDER NOW</span>
                                 <span class="button-arrow" aria-hidden="true">→</span>
                             </button>
@@ -46,30 +46,30 @@
                 </div>
             </div>
         </header>
-        <section class="main-section">
+        <section class="main-section" id="broth-section">
             <div class="wrapper-titles">
                 <p class="main-title">First things first: select your favorite broth.</p>
                 <p class="second-title">It will give the whole flavor on your ramen soup. </p>
             </div>
             <form>
                 <div role="radiogroup" class="wrapper-cards">
-                    <div role="radio" class="main-card" id="salt-option" data-value="salt" onclick="selectCardBroth('#salt-option', './assets/images/active_salt.png')">
-                        <img src="./assets/images/inactive_salt.png">
-                        <p class="card-title">Salt</p>
-                        <p class="card-text">Simple like the seawater, nothing more </p>
-                        <p class="card-price">US$10</p>
+                    <div role="radio" class="main-card" id="salt-option" data-value="1" onclick="selectCardBroth('#salt-option', `https://tech.redventures.com.br/icons/salt/active.svg`)">
+                        <img src="" id="salt-image">
+                        <p class="card-title" id="salt-title"></p>
+                        <p class="card-text" id="salt-desc"></p>
+                        <p class="card-price" id="salt-price"></p>
                     </div>
-                    <div role="radio" class="main-card" id="shoyu-option" data-value="shoyu" onclick="selectCardBroth('#shoyu-option', './assets/images/active_shoyu.png')">
-                        <img src="./assets/images/inactive_shoyu.png">
-                        <p class="card-title">Shoyu</p>
-                        <p class="card-text">The good old and traditional soy sauce </p>
-                        <p class="card-price">US$10</p>
+                    <div role="radio" class="main-card" id="shoyu-option" data-value="2" onclick="selectCardBroth('#shoyu-option', 'https://tech.redventures.com.br/icons/shoyu/active.svg')">
+                        <img src="" id="shoyu-image">
+                        <p class="card-title" id="shoyu-title"></p>
+                        <p class="card-text" id="shoyu-desc"></p>
+                        <p class="card-price" id="shoyu-price"></p>
                     </div>
-                    <div role="radio" class="main-card" id="miso-option" data-value="miso" onclick="selectCardBroth('#miso-option', './assets/images/active_miso.png')">
-                        <img src="./assets/images/inactive_miso.png">
-                        <p class="card-title">Miso</p>
-                        <p class="card-text">Paste made of fermented soybeans</p>
-                        <p class="card-price">US$12</p>
+                    <div role="radio" class="main-card" id="miso-option" data-value="3" onclick="selectCardBroth('#miso-option', 'https://tech.redventures.com.br/icons/miso/active.svg')">
+                        <img src="" id="miso-image">
+                        <p class="card-title" id="miso-title"></p>
+                        <p class="card-text" id="miso-desc"></p>
+                        <p class="card-price" id="miso-price"></p>
                     </div>
                 </div>
             </form>
@@ -82,31 +82,32 @@
             </div>
             <form>
                 <div role="radiogroup" class="wrapper-cards">
-                    <div role="radio" class="main-card" id="pork-option" data-value="pork" onclick="selectCardMeat('#pork-option', './assets/images/active_pork.png')">
-                        <img src="./assets/images/inactive_pork.png">
-                        <p class="card-title">Chasu</p>
-                        <p class="card-text">A sliced flavourful pork meat with a selection of season vegetables.</p>
-                        <p class="card-price">US$10</p>
+                    <div role="radio" class="main-card" id="pork-option" data-value="1" onclick="selectCardMeat('#pork-option', 'https://tech.redventures.com.br/icons/pork/active.svg')">
+                        <img src="" id="chasu-image">
+                        <p class="card-title" id="chasu-title"></p>
+                        <p class="card-text" id="chasu-desc"></p>
+                        <p class="card-price" id="chasu-price"></p>
                     </div>
-                    <div role="radio" class="main-card" id="yasai-option" data-value="yasai" onclick="selectCardMeat('#yasai-option', './assets/images/active_yasai.png')">
-                        <img src="./assets/images/inactive_yasai.png">
-                        <p class="card-title">Yasai Vegetarian</p>
-                        <p class="card-text">A delicious vegetarian lamen with a selection of season vegetables. </p>
-                        <p class="card-price">US$10</p>
+                    <div role="radio" class="main-card" id="yasai-option" data-value="2" onclick="selectCardMeat('#yasai-option', 'https://tech.redventures.com.br/icons/yasai/active.svg')">
+                        <img src="" id="yasai-image">
+                        <p class="card-title" id="yasai-title"></p>
+                        <p class="card-text" id="yasai-desc"></p>
+                        <p class="card-price" id="yasai-price"></p>
                     </div>
-                    <div role="radio" class="main-card" id="chicken-option" data-value="chicken" onclick="selectCardMeat('#chicken-option', './assets/images/active_chicken.png')">
-                        <img src="./assets/images/inactive_chicken.png">
-                        <p class="card-title">Karaague</p>
-                        <p class="card-text">Three units of fried chicken, moyashi, ajitama egg and other vegetables.</p>
-                        <p class="card-price">US$12</p>
+                    <div role="radio" class="main-card" id="chicken-option" data-value="3" onclick="selectCardMeat('#chicken-option', 'https://tech.redventures.com.br/icons/chicken/active.svg')">
+                        <img src="" id="karaague-image">
+                        <p class="card-title" id="karaague-title"></p>
+                        <p class="card-text" id="karaague-desc"></p>
+                        <p class="card-price" id="karaague-price"></p>
                     </div>
                 </div>
             </form>
-            <button class="main-button button-center" id="place-order-button" disabled>
+            <button class="main-button button-center" id="place-order-button" onclick="submitButton()" disabled>
                 <span class="button-text">PLACE MY ORDER</span>
                 <span class="button-arrow" aria-hidden="true">→</span>
             </button>
         </section>
         <script src="./js/utils.js"></script>
+        <script src="./js/api.js"></script>
     </body>
 </html>

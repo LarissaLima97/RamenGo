@@ -11,34 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/sucess-section.css">
-    <!-- <link rel="stylesheet" href="./css/info-order.css"> -->
+    <link rel="stylesheet" href="./css/success-section.css">
     <link rel="stylesheet" href="./css/main-logo.css">
     <link rel="stylesheet" href="./css/main-button.css">
 
 </head>
 <body>
-    <section class="sucess-section left">
-        <h1 class="main-logo sucess">ramenGo!</h1>
+    <section class="success-section left">
+        <h1 class="main-logo success">ramenGo!</h1>
             
         <div class="wrapper-content">
-            <img src="./assets/images/active_miso.png" alt="">
+            <img src="" id="image-success">
             <p class="text-first">Your Order:</p>
-            <p class="text-second">Shoyu and Karaague Ramen</p>
+            <p class="text-second" id="text-success"></p>
         </div>
     </section>
 
-    <section class="sucess-section right">   
+    <section class="success-section right">   
         <div class="wrapper-content">
             <img src="./assets/images/bowing.png">
             <p class="text-second">どもありがとうございます。</p>
             <p class="text-third">Your order is being prepared</p>
             <p class="text-fourth">Hold on, when you least expect you will be eating your rámen.</p>
-            <button class="main-button button-center">
+            <button class="main-button button-center" onclick="goHome()">
                 <span class="button-text">PLACE NEW ORDER</span>
                 <span class="button-arrow" aria-hidden="true">→</span>
             </button>
         </div>
     </section>
+    <script src="./js/utils.js"></script>
 </body>
 </html>
