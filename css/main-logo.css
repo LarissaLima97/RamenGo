@@ -5,23 +5,25 @@
     font-weight: 900;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .main-logo{
       margin-left: auto;
       margin-right: auto;
     }
 }
 
-@media (max-width: 480px) {
-    .main-logo{
-      margin-left: auto;
-      margin-right: auto;
-    }
-}
 
 .main-logo.success {
   position: absolute;
   color: var(--third-color);
   font-weight: 900;
   padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .main-logo.success {
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+  }
 }

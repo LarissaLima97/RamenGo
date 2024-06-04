@@ -36,3 +36,10 @@
 .button-center {
     margin: 50px auto;
 }
+
+@media (max-width: 600px) {
+  .mobile {
+    display: none;
+  }
+
+}

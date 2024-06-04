@@ -1,19 +1,13 @@
 .main-header {
     display: flex;
     background-image: url("../assets/images/pattern-vermelha.png");
-    width: 100%;
     padding: 10px 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .main-header {
       flex-direction: column;
       align-items: flex-start;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-header {
       padding: 10px;
     }
 }

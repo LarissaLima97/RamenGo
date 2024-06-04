@@ -26,6 +26,11 @@
     text-align: center;
 }
 
+#image-sucess {
+    width: 100%;
+    height: auto;
+}
+
 .text-first {
     font-weight: 900;
     font-size: 1.25em;
@@ -49,4 +54,37 @@
     font-weight: 400;
     font-size: 1em;
     color: var(--fourth-color);
+}
+
+@media(max-width: 600px){
+    .success-section {
+       display: flex;
+       flex-direction: column;
+       position: relative;
+       min-height: 100%;
+       z-index: 0;
+       width: 100%;
+    }
+    
+    .wrapper-content {
+        position: unset;
+        transform: none;
+    }
+    
+    .text-first {
+        font-size: 0.9em;
+    }
+    
+    .text-second {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    
+    .text-third {
+        font-size: 1em;
+    }
+    
+    .text-fourth {
+        font-size: 1em;
+    }
 }
